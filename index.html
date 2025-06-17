@@ -5,18 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
 </head>
 <body>
     <header>
-        <div class="head section"></div>
-        <div class="head section"></div>
-        <div class="head section"></div>
-        <div class="head section"></div>
+        <div class="head section1">
+            <img class="magnify" src="Images/magnify.svg" alt="magnifying glass">
+            <input type="text" name="search" id="search">
+        </div>
+        <div class="head section2">
+            <img src="Images/bell-ring-outline.svg" alt="notification bell">
+            <img id="logo" src="Images/logo-2067396_1280.png" alt="logo">
+            <!-- <p>Image by <a href="https://pixabay.com/users/osydenic-4560311/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2067396">Deni Iqbal</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2067396">Pixabay</a></p> -->
+             <p>Mark Murai</p>
+        </div>
+        <div class="head section3">
+            <img id="logo" src="Images/logo-2067396_1280.png" alt="logo">
+            <div class="introduction">
+                <p class="top">Hi there,</p>
+                <p class="bottom">Mark Murai(@markmurai)</p>
+            </div>
+        </div>
+        <div class="head section4">
+            <input type="button" value="New" name="new" id="new">
+            <input type="button" value="Upload" name="upload" id="upload">
+            <input type="button" value="Share" name="share" id="share">
+        </div>
     </header>
     <div class="sidebar">
-        <div class="side section"></div>
-        <div class="side section"></div>
-        <div class="side section"></div>
+        <div class="side-section1">
+            <img src="Images/view-dashboard.svg" alt="dashboard sign">
+            <p>Dashboard</p>
+        </div>
+        <div class="side side-section2">
+            <div class="option">
+                <img src="Images/home.svg" alt="home sign">
+                <p>Home</p>
+            </div>
+            <div class="option">
+                <img src="Images/card-account-details-outline.svg" alt="profile sign">
+                <p>Profile</p>
+            </div>
+            <div class="option">
+                <img src="Images/message-reply.svg" alt="message">
+                <p>Messages</p>
+            </div>
+            <div class="option">
+                <img src="Images/history.svg" alt="history sign">
+                <p>History</p>
+            </div>
+            <div class="option">
+                <img src="Images/note-multiple.svg" alt="Tasks sign">
+                <p>Tasks</p>
+            </div>
+            <div class="option">
+                <img src="Images/account-group.svg" alt="Communities sign">
+                <p>Communities</p>
+            </div>
+        </div>
+        <div class="side side-section3">
+            <div class="option">
+                <img src="Images/cog.svg" alt="Settings sign">
+                <p>Settings</p>
+            </div>
+            <div class="option">
+                <img src="Images/help-box.svg" alt="Support sign">
+                <p>Support</p>
+            </div>
+            <div class="option">
+                <img src="Images/shield-check.svg" alt="Privacy sign">
+                <p>Privacy</p>
+            </div>
+        </div>
     </div>
     <main>
         <div class="main section projects">
@@ -46,9 +108,9 @@
             <div class="trending-wrapper">
                 <p>Trending</p>
                 <div class="trendings-grids">
-                    <div class="trendings"></div>
-                    <div class="trendings"></div>
-                    <div class="trendings"></div>
+                    <div class="trending"></div>
+                    <div class="trending"></div>
+                    <div class="trending"></div>
                 </div>
             </div>
         </div>

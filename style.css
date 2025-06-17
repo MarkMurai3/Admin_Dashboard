@@ -3,15 +3,26 @@
 }
 
 
+/* .Inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
 :root{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     --mainOrange: #E97700;
     --mainYellow: #FFB703;
-    --mainLightBlue: #8ECAE6;
+    --mainLightBlue: #28b6f8;
     --mainBlue: #2671BC;
     --mainDarkOrange: #D1470B;
+    --whiteVal: white;
+    --greyVal: #d4dce0;
+    font-family: "Inter", sans-serif;
+
 }
 
 html{
@@ -20,11 +31,11 @@ html{
     margin: 0;
 }
 
-body{
+body{ 
     min-height: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 4fr;
 }
 
@@ -32,13 +43,93 @@ header{
     grid-column: 2/-1;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 header > section{
     /* empty */
 }
 
+.head{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    gap: 20px;
+
+}
+
+.head > input{
+    flex: 2;
+    background-color:#d4dce0;
+    height: 1.5em;
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding: 0 15px;
+    border: 0;
+}
+
+.head > input[type="text"]:focus{
+    background-color: #e6edf0;
+    /* border is still there in focus. Idk if we want it */
+}
+
+.section2 > #logo{
+    height:3em;
+    /* width: 60px; */
+
+    /* border-radius: 50px; */
+    object-fit: cover;
+
+}
+
+.section2 > p{
+    font-family: "Inter", sans-serif;
+    font-weight:600;
+    font-size: 1.4em;
+}
+
+.section3 {
+    justify-content: start;
+}
+
+.section3 > #logo{
+    height: 4em;
+    object-fit: cover;
+}
+
+.introduction {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.introduction > .top{
+    font-size: small;
+}
+
+.introduction > .bottom {
+    font-size: larger;
+}
+
+.head > img{
+    height: 30px;
+}
+
+.section4 > input{
+    background-color: var(--mainLightBlue);
+    color: var(--whiteVal);
+    height: 2em;
+    padding: 0;
+    /* width: 20px; */
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 30em;
+
+}
+
+/*  */
 
 .sidebar{
     grid-column: 1/2;
@@ -46,18 +137,49 @@ header > section{
     background-color: var(--mainLightBlue);
     display: grid;
     grid-template-rows: 1fr 4fr 5fr;
+    color: var(--whiteVal);
+
 }
 
-.sidebar > section{
-    
+.side-section1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 1.5em;
+    color: var(--whiteVal);
+}
+
+.side-section1 > img{
+    height: 3em;
+    filter: invert(100%);
+}
+
+.side-section1 > p{
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-left: 2em;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.side img{
+    height: 2em;
+    filter: invert(100%);
 }
 
 main{
     grid-column: 2/-1;
     grid-row: 2/-1;
-    background-color: #d4dce0;
+    background-color: var(--greyVal);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
 }
 
 
@@ -104,30 +226,67 @@ main{
 
 .announcements{
     /* background-color: #FFB703; */
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .announcement-wrapper{
     /* background-color: aquamarine; */
-    display: grid;
+
+    /* height: 100%; */
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement-wrapper > p{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    margin: 20px 0;
 }
 
 .announcement-grids{
+    /* height: 100%; */  /* So if we use height 100% it'll cover the <p> of Trending too? Why? I DONT FUCKING KNOW */
+    flex: 1;
 
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .announcement{
-
-}
-
-.trending-wrapper{
-
-}
-
-.trendings-grids{
+    /* height: 100%; */
 
 }
 
 .trendings{
-    /* background-color: blue; */
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.trending-wrapper > p{
+    grid-column: 2/-1;
+    margin: 20px 0;
+}
+
+.trending-wrapper{
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trendings-grids{
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trending{
+
 }
 
